@@ -2,7 +2,7 @@
 
 ## Fork Notes
 
-This fork contains an altered magic_mapper_config.json that does the following
+This fork contains an altered magic_mapper_config.json that maps the following
 
 
 -Red = set OLED blacklight to 0
