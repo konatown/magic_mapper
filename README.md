@@ -1,5 +1,13 @@
 # Magic Mapper
 
+## Fork Notes
+
+This fork contains an altered magic_mapper_config.json that does the following{
+-Red = set OLED blacklight to 0
+-Green = set OLED blacklight to 100
+-Blue = launch Stremio
+-Green = launch HDMI 2
+
 ## Summary
 
 Magic Mapper is a script that will let you remap unused buttons on the LG Magic Remote. The script itself runs on your rooted LG TV, detects button presses, and allows you to control anything available via the [luna-send api](https://www.webosose.org/docs/tools/commands/luna-send/). Note your TV must be rooted to use this.
