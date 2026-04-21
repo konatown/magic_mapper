@@ -1,82 +1,28 @@
 {
-  "yellow": {
-    "function": "cycle_energy_mode",
-    "inputs": {
-      "reverse_order": false,
-      "notifications": false
-    }
-  },
-  "blue": {
-    "function": "toggle_eye_comfort",
-    "inputs": {
-      "notifications": true
-    }
-  },
   "red": {
-    "function": "reduce_oled_light",
-    "inputs": {
-      "increment": 10,
-      "disable_energy_savings": "True"
-    }
-  },
-  "green": {
-    "function": "increase_oled_light",
-    "inputs": {
-      "increment": 10,
-      "disable_energy_savings": "True"
-    }
-  },
-  "guide": [
-    {
-      "function": "send_cec_button",
-      "appId": "com.webos.app.hdmi2",
-      "inputs": {
-          "code": 18882565
-      }
-    },
-    {
-      "function": "curl",
-      "appId": "com.webos.app.hdmi1",
-      "inputs": {
-          "url": "http://homeassistant.local:8123/api/webhook/lg-webos-remote-guide-button-hdmi1"
-      }
-    },
-    {
-      "function": "curl",
-      "inputs": {
-          "url": "http://homeassistant.local:8123/api/webhook/lg-webos-remote-guide-button-common"
-      }
-    },
-    {
-      "function": "curl",
-      "comment": "Special appId of '!' indicates that it would be played if no app-specific entry matched so far. This is like the 'default' in the C switch case.",
-      "appId": "!",
-      "inputs": {
-          "url": "http://homeassistant.local:8123/api/webhook/lg-webos-remote-guide-button-default"
-      }
-    }
-  ],
-  "9": {
-    "function": "screen_off"
-  },
-  "0-example remove all but the 0 to assign to button 0": {
-    "function": "send_ir_command",
-    "inputs": {
-      "tv_input": "optical",
-      "keycode": "IR_KEY_POWER",
-      "device_type": "audio"
-    }
-  },
-  "1-example remove all but the 1 to assign to button 1": {
-    "function": "launch_app",
-    "inputs": {
-      "app_id": "netflix"
-    }
-  },
-  "EXAMPLE - replace this text with the button name 'prime' to have the prime button launch plex": {
-    "function": "launch_app",
-    "inputs": {
-      "app_id": "cdp-30"
-    }
+  "function": "set_oled_backlight",
+  "inputs": {
+    "backlight": 0,
+    "notifications": true
   }
+},
+  "green": {
+  "function": "set_oled_backlight",
+  "inputs": {
+    "backlight": 100,
+    "notifications": true
+  }
+},
+  "blue": {
+  "function": "launch_app",
+  "inputs": {
+      "app_id": "io.strem.tv"
+    }
+  },
+  "yellow": {
+  "function": "launch_app",
+  "inputs": {
+    "app_id": "com.webos.app.hdmi2"
+  }
+}
 }
