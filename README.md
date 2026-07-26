@@ -9,9 +9,11 @@ This fork contains an altered magic_mapper_config.json that maps the following
 
 -Green = set OLED blacklight to 100
 
+-Yellow = launch HDMI 2
+
 -Blue = launch Stremio
 
--Green = launch HDMI 2
+
 
 ## Summary
 
